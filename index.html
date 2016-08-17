@@ -1,32 +1,132 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Barbershop</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="/css/style.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
+        <header class="main-header">
+            <div class="container">
+                <nav class="header-navigation">
+                    <a href="#">Главная</a>
+                    <a href="#">Информация</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Прайс-лист</a>
+                    <a href="#">Магазин</a>
+                    <a href="#">Контакты</a>
+                </nav>
+                <div class="user-block">
+                    <a class="login" href="#">Вход</a>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <img class="logo" src="#" alt="logo" width="368" height="204"/>
+            <section class="features">
+                <div class="feature-item">
+                    <b class="feature-title">Быстро</b>
+                    <p class="feature-text">
+                        мы делаем свою работу быстро! два часа пролетят незаметно и вы — счастливый обладетель стильной стрижки-минутки!
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <b class="feature-title">Круто</b>
+                    <p class="feature-text">
+                        забудьте, как вы стриглись раньше. мы сделаем из вас звезду футбола или кино! во всяком случае внешне.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <b class="feature-title">Дорого</b>
+                    <p class="feature-text">
+                        наши мастера — профессионалы своего дела и не могут стоить дешево. к тому же, разве цена не дает определеный статус?
+                    </p>
+                </div>
+            </section>
+            <div class="info-blocks">
+                <div class="info-block_left">
+                    <h2>Новости</h2>
+                    <ul class="news-preview">
+                        <li>
+                            <p>нам наконец завезли ягермайстер! теперь вы можете пропустить стаканчик во время стрижки</p>
+                            <time datetime="2016-05-25">25 сентебря</time>
+                        </li>
+                        <li>
+                            <p>в нашей команде пополнение, борис «бритва» стригунец, обладетель множества титулов и наград пополнил наши стройные ряды</p>
+                            <time datetime="2016-05-25">19 сентебря</time>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn">Все новости</a>
+                </div>
+                <div class="info-block_right">
+                    <h2>Фотогалерея</h2>
+                    <figure class="gallery-content">
+                        <img src="#" alt="gallery-image" width="286" height="164">
+                    </figure>
+                    <button class="btn" type="button" name="prev">Назад</button>
+                    <button class="btn" type="button" name="next">Вперед</button>
+                </div>
+            </div>
+            <div class="info-blocks">
+                <div class="info-block_left">
+                    <h2>Контактная информация</h2>
+                    <p>
+                        барбершоп «бородинский» адрес: г.
+                        <br>
+                        санкт-петербург, б. конюшенная, д. 19/8
+                        <br>
+                        телефон: +7 (495) 666-02-66
+                    </p>
+                    <p>
+                        время работы:
+                        <br>
+                        пн — пт: с 10:00 до 22:00
+                        <br>
+                        сб — вс: с 10:00 до 19:00
+                    </p>
+                    <a href="#" class="btn">Как проехать</a>
+                    <a href="#" class="btn">Обратная связь</a>
+                </div>
+                <div class="info-block_right">
+                    <h2>Записаться</h2>
+                    <form class="submit-form" action="#" method="post">
+                        <input type="text" name="date" value="" placeholder="Дата">
+                        <input type="text" name="time" value="" placeholder="Время">
+                        <input type="text" name="name" value="" placeholder="Телефон">
+                        <input type="tel" name="phone" value="" placeholder="Ваше имя">
+                        <button class="btn" type="submit" name="next">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="container">
+            <section class="address">
+                <p>
+                    барбершоп «бородинский» <br>
+                    адрес: г. санкт-петербург, ул. б. конюшен    ная,д. 19/8 <br>
+                    <a href="#">как нас найти? </a><br>
+                    телефон: +7 (495) 666-02-66
+                </p>
+            </section>
+            <section class="social">
+                <p>Давайте дружить!</p>
+                <a href="#" class="social-btn social-btn-vk">vk</a>
+                <a href="#" class="social-btn social-btn-fb">fb</a>
+                <a href="#" class="social-btn social-btn-inst">inst</a>
+            </section>
+            <section class="copyirght">
+                <p>Разработано:</p>
+                <a href="#" class="btn">htmlacademy.ru</a>
+            </section>
+        </footer>
     </body>
 </html>
