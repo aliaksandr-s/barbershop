@@ -25,15 +25,15 @@ gulp.task('styles', function() {
 		//.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer({browsers: ['last 10 versions'], cascade: false}))
 		//.pipe(cleanCSS())
+		.pipe(concat('style.css'))
 		.pipe(gulp.dest('./css'))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
 	gulp.watch('sass/*.sass', ['styles']);
-	gulp
-		.watch('*.html')
-		.on('change', browserSync.reload);
+	gulp.watch('pages/*.html').on('change', browserSync.reload);
+	gulp.watch('*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

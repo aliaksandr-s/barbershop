@@ -1,6 +1,68 @@
 body {
   font-family: 'PT Sans', sans-serif; }
 
+fieldset {
+  border: none; }
+
+.item-link {
+  display: block; }
+
 .container {
-  max-width: 940px;
-  margin: 0 auto; }
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.main-header {
+  margin-bottom: 60px; }
+  .main-header .header-navigation {
+    float: left;
+    width: 780px; }
+  .main-header .user-block {
+    float: right;
+    width: 140px; }
+
+.index-content .logo {
+  display: block;
+  height: 204px;
+  width: 368px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px; }
+
+.features {
+  margin-bottom: 80px; }
+  .features .feature-item {
+    float: left;
+    width: 300px;
+    margin-right: 20px; }
+    .features .feature-item:last-child {
+      margin-right: 0; }
+
+.info-blocks {
+  padding: 50px 80px; }
+  .info-blocks .info-block_left {
+    width: 380px;
+    float: left; }
+  .info-blocks .info-block_right {
+    width: 300px;
+    float: right; }
+
+footer {
+  margin-top: 65px;
+  padding-top: 55px;
+  padding-bottom: 40px; }
+  footer .address {
+    width: 320px;
+    float: left;
+    margin-right: 60px; }
+  footer .social {
+    width: 180px;
+    float: left; }
+  footer .copyright {
+    width: 180px;
+    float: right; }
