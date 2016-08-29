@@ -1,0 +1,241 @@
+@import "vars.sass"
+
+.index-content
+    background: rgb(0, 0, 0) url(../img/background.jpg) no-repeat center top
+    background-size: cover
+    color: $white
+    padding-bottom: 30px
+    .logo
+        display: block
+        height: 204px
+        width: 368px
+        margin-right: auto
+        margin-left: auto
+        margin-bottom: 25px
+        padding-top: 60px
+
+.features
+    margin-bottom: 80px
+
+.feature-item
+    float: left
+    width: 300px
+    margin-right: 20px
+    text-align: center
+    &:last-child
+        margin-right: 0
+
+    .feature-title
+        display: block
+        font-size: 30px
+        line-height: 23px
+        padding-bottom: 40px
+        margin-bottom: 40px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            background-color: $white
+            top: 50px
+            margin-left: -10px
+            left: 50%
+            transform: rotate(45deg)
+
+
+.info-blocks
+    padding: 50px 80px
+    margin-bottom: 35px
+    color: $black
+    background: url(../img/stripe.png) no-repeat center, $pattern url(../img/pattern.jpg)
+
+    h2
+        height: 23px
+        font-size: 30px
+        margin: 0
+        margin-bottom: 40px
+    p
+        margin: 0
+
+.info-block_left
+    width: 380px
+    float: left
+.info-block_right
+    width: 300px
+    float: right
+
+.news-preview
+    margin: 0
+    list-style: none
+    padding: 0
+    padding-right: 70px
+    li
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 30px
+    time
+        font-weight: 400
+        text-transform: lowercase
+
+.index-gallery
+    height: 326px
+    position: relative
+
+    img
+        background-color: rgb(199, 199, 199)
+        border: 7px solid white
+        width: 286px
+        height: 164px
+    .btn
+        position: absolute
+        bottom: 0
+        margin: 0
+        padding: 0
+        width: 140px
+        height: 43px
+
+        &[name='next']
+            right: 0
+
+        &[name='prev']
+            left: 0
+
+.contact-information
+    .contact-information_address
+        margin-bottom: 23px
+    .contact-information_time
+        margin-bottom: 40px
+
+.appointment-form
+    margin-top: 22px
+    input
+        outline: none
+        font-family: inherit
+        font-size: inherit
+        line-height: inherit
+        text-transform: inherit
+        color: $black
+        padding-left: 15px
+        box-sizing: border-box
+        width: 140px
+        height: 43px
+        border: 2px solid $black
+        float: left
+        margin-right: 20px
+        margin-bottom: 20px
+
+        &:nth-child(2n)
+            margin-right: 0
+
+        &:focus
+            border: 2px solid $hover
+
+    button
+        margin-top: 11px
+        width: 100%
+
+.modal
+    position: absolute
+    box-sizing: border-box
+    top: 140px
+    left: 50%
+    margin-left: -230px
+    width: 460px
+    padding: 50px 80px
+    background: $pattern url(../img/pattern.jpg)
+    h1
+        font-size: 30px
+        line-height: 1.2
+        margin: 0
+    p
+        margin: 15px 0
+    a
+        color: $black
+
+.modal-form
+    input[type='text'], input[type='password']
+        @extend .base-font-style
+        display: block
+        width: 251px
+        padding: 8px 30px 8px 15px
+        margin-bottom: 10px
+        border: 2px solid $black
+        outline: none
+        &:focus
+            border: 2px solid $hover
+        &:last-of-type
+            margin-bottom: 15px
+    .input-user
+        background-image: url('../img/sprite-2.png')
+        background-repeat: no-repeat
+        background-position: 96% -25px
+
+    .input-password
+        background-image: url('../img/sprite-2.png')
+        background-repeat: no-repeat
+        background-position: 96% 10px
+
+    .reset-password
+        float: right
+        text-decoration: underline
+
+    button[type='submit']
+        width: 100%
+        margin-top: 13px
+
+.login-checkbox
+    input
+        display: none
+
+    input[type='checkbox'] + .checkbox-indicator
+        display: inline-block
+        position: relative
+        width: 17px
+        height: 17px
+        border: 2px solid $black
+        vertical-align: top
+        margin-right: 10px
+
+    input[type='checkbox']:checked + .checkbox-indicator
+        &::after, &::before
+            content: ''
+            position: absolute
+            height: 2px
+            width: 15px
+            background-color: $black
+            top: 8px
+            left: 1px
+        &::after
+            transform: rotate(45deg)
+        &::before
+            transform: rotate(-45deg)
+
+.close-modal
+    position: absolute
+    right: 0
+    top: 0
+    margin-top: 5px
+    margin-right: -35px
+    font-size: 0
+    padding: 0
+    outline: none
+    border: none
+    width: 23px
+    height: 23px
+    background-color: transparent
+    &::after, &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 10px
+        width: 25px
+        height: 4px
+        background-color: #d0d0d0
+        border-radius: 1px
+    &::after
+        transform: rotate(45deg)
+    &::before
+        transform: rotate(-45deg)
+    &:hover
+        opacity: 0.5

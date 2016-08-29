@@ -9,14 +9,14 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic" rel="stylesheet">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
-            <div class="container clearfix red">
+            <div class="container clearfix">
                 <nav class="header-navigation">
                     <a href="#">Главная</a>
                     <a href="#">Информация</a>
@@ -32,7 +32,7 @@
         </header>
         <main class="index-content">
             <div class="container">
-            <img class="logo" src="#" alt="logo" width="368" height="204"/>
+            <img class="logo" src="./img/borodinski-logo.png" alt="logo" width="368" height="204"/>
             <section class="features clearfix">
                 <div class="feature-item">
                     <b class="feature-title">Быстро</b>
@@ -68,26 +68,26 @@
                     </ul>
                     <a href="#" class="btn">Все новости</a>
                 </div>
-                <div class="info-block_right">
+                <div class="info-block_right index-gallery">
                     <h2>Фотогалерея</h2>
                     <figure class="gallery-content">
-                        <img src="#" alt="gallery-image" width="286" height="164">
+                        <img src="./img/index-gallery.jpg" alt="gallery-image" width="286" height="164">
                     </figure>
-                    <button class="btn" type="button" name="prev">Назад</button>
+                    <button class="btn" type="button" name="prev" disabled>Назад</button>
                     <button class="btn" type="button" name="next">Вперед</button>
                 </div>
             </div>
             <div class="info-blocks clearfix">
-                <div class="info-block_left">
+                <div class="info-block_left contact-information">
                     <h2>Контактная информация</h2>
-                    <p>
+                    <p class="contact-information_address">
                         барбершоп «бородинский» адрес: г.
                         <br>
                         санкт-петербург, б. конюшенная, д. 19/8
                         <br>
                         телефон: +7 (495) 666-02-66
                     </p>
-                    <p>
+                    <p class="contact-information_time">
                         время работы:
                         <br>
                         пн — пт: с 10:00 до 22:00
@@ -99,7 +99,8 @@
                 </div>
                 <div class="info-block_right">
                     <h2>Записаться</h2>
-                    <form class="submit-form" action="#" method="post">
+                    <p>укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+                    <form class="appointment-form" action="#" method="post">
                         <input type="text" name="date" value="" placeholder="Дата">
                         <input type="text" name="time" value="" placeholder="Время">
                         <input type="text" name="name" value="" placeholder="Телефон">
@@ -123,8 +124,8 @@
                 <section class="social">
                     <p>Давайте дружить!</p>
                     <a href="#" class="social-btn social-btn-vk">vk</a>
-                    <a href="#" class="social-btn social-btn-fb">fb</a>
                     <a href="#" class="social-btn social-btn-inst">inst</a>
+                    <a href="#" class="social-btn social-btn-fb">fb</a>
                 </section>
                 <section class="copyright">
                     <p>Разработано:</p>
@@ -132,5 +133,21 @@
                 </section>
             </div>
         </footer>
+        <div class="modal">
+            <button class="close-modal" type="button" name="button">Закрыть</button>
+            <h1>Личный кабинет</h1>
+            <p>ВВедите пожалуйста свой логин и пароль</p>
+            <form class='modal-form' action="#" method="post">
+                <input type="text" name="login" placeholder="Логин" class="input-user">
+                <input type="password" name="password" placeholder="Пароль" class="input-password">
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember">
+                    <span class="checkbox-indicator"></span>
+                    Запомнить меня
+                </label>
+                <a href="#" class="reset-password">Я забыл пароль!</a>
+                <button type="submit" class="btn">Войти</button>
+            </form>
+        </div>
     </body>
 </html>
