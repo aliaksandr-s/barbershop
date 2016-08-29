@@ -9,22 +9,20 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic" rel="stylesheet">
 
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <header class="main-header">
-            <div class="container">
+            <div class="container clearfix">
+                <a class="nav-logo" href="../index.html"><img src="../img/logo.png" alt="barber-logo" width="111" height="24"/></a>
                 <nav class="header-navigation">
-                    <a href="../index.html">
-                        <img class="nav-logo" src="#" alt="barber-logo" width="111" height="24"/>
-                    </a>
                     <a href="#">Информация</a>
                     <a href="#">Новости</a>
                     <a href="./price.html">Прайс-лист</a>
-                    <a href="#">Магазин</a>
+                    <span class="nav-active">Магазин</span>
                     <a href="#">Контакты</a>
                 </nav>
                 <div class="user-block">
@@ -33,13 +31,16 @@
             </div>
         </header>
 
-        <main class="container">
-            <h1>Средства для ухода</h1>
-            <div class="breadcrumb">
-                <a href="#">Главная</a>
-                <a href="#">Магазин</a>
-                <a href="#">Средства для ухода</a>
+        <main class="shop">
+            <div class="container main-title">
+                <h1>Средства для ухода</h1>
+                <div class="breadcrumb">
+                    <a href="#">Главная</a>
+                    <a href="#">Магазин</a>
+                    <span>Средства для ухода</span>
+                </div>
             </div>
+            <div class="container clearfix">
             <aside class="left-column">
                 <form action="#">
                     <fieldset>
@@ -47,7 +48,7 @@
                         <label><input type="checkbox" checked id="Baxter">Baxter
                         </label><br>
                         <label>
-                            <input type="checkbox" id="Mr Natty">Mr Natty
+                            <input type="checkbox" id="Mr-Natty">Mr Natty
                         </label><br>
                         <label>
                             <input type="checkbox" id="Suavecito">Suavecito
@@ -59,7 +60,7 @@
                             <input type="checkbox" id="Murray’s">Murray’s
                         </label><br>
                         <label>
-                            <input type="checkbox" checked id="American Crew">American Crew
+                            <input type="checkbox" checked id="American-Crew">American Crew
                         </label><br>
                     </fieldset>
                     <fieldset>
@@ -82,7 +83,7 @@
             </aside>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="#" alt="" class="item-image" width="220" height="165">
+                    <img src="../img/item-1.jpg" alt="" class="item-image" width="220" height="165">
                     <a href="./item.html" class="item-link">
                         <span class="item-type">Набор для путешествий</span><br>
                         <span class="item-title">«Baxter of California»</span>
@@ -93,7 +94,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="#" alt="" class="item-image" width="220" height="165">
+                    <img src="../img/item-2.jpg" alt="" class="item-image" width="220" height="165">
                     <a href="./item.html" class="item-link">
                         <span class="item-type">Увлажняющий кондиционер</span><br>
                         <span class="item-title">«Baxter of California»</span>
@@ -104,8 +105,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="#" alt="" class="item-image" width="220" height="165">
-                    <a href="./item.html" class="item-link">
+                    <img src="../img/item-3.jpg" alt="" class="item-image" width="220" height="165">
+                    <a href="" class="item-link">
                         <span class="item-type">Гель для волос</span><br>
                         <span class="item-title">«SUAVECITO»</span>
                     </a>
@@ -115,7 +116,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="#" alt="" class="item-image" width="220" height="165">
+                    <img src="../img/item-4.jpg" alt="" class="item-image" width="220" height="165">
                     <a href="./item.html" class="item-link">
                         <span class="item-type">Глина для укладки волос</span><br>
                         <span class="item-title">«American crew»</span>
@@ -126,7 +127,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="#" alt="" class="item-image" width="220" height="165">
+                    <img src="../img/item-5.jpg" alt="" class="item-image" width="220" height="165">
                     <a href="./item.html" class="item-link">
                         <span class="item-type">Гель для волос</span><br>
                         <span class="item-title">«American crew»</span>
@@ -137,7 +138,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="#" alt="" class="item-image" width="220" height="165">
+                    <img src="../img/item-6.jpg" alt="" class="item-image" width="220" height="165">
                     <a href="./item.html" class="item-link">
                         <span class="item-type">Набор для бритья</span><br>
                         <span class="item-title">«Baxter of California»</span>
@@ -155,30 +156,30 @@
                     <a href="#">4</a>
                 </div>
             </div>
+            </div>
         </main>
 
-        <footer class="container">
-            <section class="address">
-                <p>
-                    барбершоп «бородинский»
-                    <br>
-                    адрес: г. санкт-петербург, ул. б. конюшен ная,д. 19/8
-                    <br>
-                    <a href="#">как нас найти?
-                    </a><br>
-                    телефон: +7 (495) 666-02-66
-                </p>
-            </section>
-            <section class="social">
-                <p>Давайте дружить!</p>
-                <a href="#" class="social-btn social-btn-vk">vk</a>
-                <a href="#" class="social-btn social-btn-fb">fb</a>
-                <a href="#" class="social-btn social-btn-inst">inst</a>
-            </section>
-            <section class="copyright">
-                <p>Разработано:</p>
-                <a href="#" class="btn">htmlacademy.ru</a>
-            </section>
+        <footer class="gradient-footer">
+            <div class="container clearfix">
+                <section class="address">
+                    <p>
+                        барбершоп «бородинский» <br>
+                        адрес: г. санкт-петербург, ул. б. конюшен    ная,д. 19/8 <br>
+                        <a href="#">как нас найти? </a><br>
+                        телефон: +7 (495) 666-02-66
+                    </p>
+                </section>
+                <section class="social">
+                    <p>Давайте дружить!</p>
+                    <a href="#" class="social-btn social-btn-vk">vk</a>
+                    <a href="#" class="social-btn social-btn-inst">inst</a>
+                    <a href="#" class="social-btn social-btn-fb">fb</a>
+                </section>
+                <section class="copyright">
+                    <p>Разработано:</p>
+                    <a href="#" class="btn">htmlacademy.ru</a>
+                </section>
+            </div>
         </footer>
     </body>
 </html>
