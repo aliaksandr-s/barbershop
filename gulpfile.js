@@ -22,13 +22,21 @@ gulp.task('styles', function() {
 		.pipe(sass({
 			includePaths: require('node-bourbon').includePaths
 		}).on('error', sass.logError))
-		//.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer({browsers: ['last 10 versions'], cascade: false}))
+		//.pipe(rename({suffix: '.min', prefix : ''}))
 		//.pipe(cleanCSS())
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('./css'))
 		.pipe(browserSync.stream());
 });
+
+gulp.task('minify', function () {
+	return gulp
+		.src('./css/style.css')
+		.pipe(rename({suffix: '.min', prefix : ''}))
+		.pipe(cleanCSS())
+		.pipe(gulp.dest('./css'))
+})
 
 gulp.task('watch', function() {
 	gulp.watch('sass/*.sass', ['styles']);
