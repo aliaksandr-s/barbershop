@@ -5,7 +5,9 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	browserSync = require('browser-sync').create(),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify');
+	uglify = require('gulp-uglify'),
+	imagemin = require('gulp-imagemin'),
+	cache = require('gulp-cache');
 
 gulp.task('browser-sync', ['styles'], function() {
 	browserSync.init({
@@ -37,6 +39,15 @@ gulp.task('minify', function () {
 		.pipe(cleanCSS())
 		.pipe(gulp.dest('./css'))
 })
+
+gulp.task('images', function(){
+  return gulp.src('./img/**/*.+(png|jpg|jpeg|gif|svg)')
+  // Caching images that ran through imagemin
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
+  .pipe(gulp.dest('./img'))
+});
 
 gulp.task('watch', function() {
 	gulp.watch('sass/*.sass', ['styles']);
