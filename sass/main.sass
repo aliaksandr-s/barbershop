@@ -1,21 +1,25 @@
 @import "vars.sass"
 
 body
-    @extend .base-font-style
     min-width: 960px
 
+    @extend .base-font-style
+
 main
-    background: $pattern url(../img/pattern.jpg)
     padding-top: 60px
 
+    background: $pattern url(../img/pattern.jpg)
+
 a
-    color: white
     text-decoration: none
 
+    color: white
+
 fieldset
+    padding: 0
+
     border: none
     border-width: 0
-    padding: 0
 
 .item-link
     display: block
@@ -26,32 +30,182 @@ fieldset
     padding: 0 10px
 
 .clearfix::after
-    content: ""
     display: block
     clear: both
 
+    content: ""
+
 .btn
-    font-family: 'PT Sans Narrow', 'Arial', sans-serif
-    font-weight: 700
-    font-size: 14px
-    line-height: 24px
-    color: $white
-    background-color: $black
-    border: none
-    outline: none
-    text-transform: uppercase
-    cursor: pointer
-    vertical-align: top
+    display: inline-block
+
     margin-right: 15px
     padding: 10px 32px
-    display: inline-block
+
+    cursor: pointer
     transition: 0.3s
+    vertical-align: top
+    text-transform: uppercase
+
+    color: $white
+    border: none
+    outline: none
+    background-color: $black
+
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
 
     &:active, &:hover
         background-color: $hover
 
     &:disabled, .disabled
-        opacity: 0.5
         cursor: default
+
+        opacity: 0.5
     &:disabled:hover
         background-color: $black
+
+.price-wrapper
+    .item-price
+        display: inline-block
+
+        box-sizing: border-box
+        width: 104px
+        padding: 10px 0px
+
+        text-align: center
+        background-color: #e6e6e6
+
+    .btn
+        display: inline-block
+
+        width: 76px
+        box-sizing: border-box
+        text-align: center
+
+        padding: 10px 0px
+        margin-left: -3px
+        margin-right: 0
+
+.custom-ul-1
+    list-style: none
+    margin-left: 20px
+    padding: 0
+    li
+        position: relative
+        margin-bottom: 12px
+        &::before
+            content: ''
+            position: absolute
+            top: 9px
+            width: 8px
+            height: 8px
+            margin-left: -19px
+            background-color: $black
+            transform: rotate(45deg)
+
+.cross-checkbox
+    input
+        display: none
+
+    input[type='checkbox'] + .checkbox-indicator
+        position: relative
+
+        display: inline-block
+
+        width: 17px
+        height: 17px
+        margin-right: 10px
+
+        vertical-align: top
+
+        border: 2px solid $black
+
+    input[type='checkbox']:checked + .checkbox-indicator
+        &::after, &::before
+            position: absolute
+            top: 8px
+            left: 1px
+
+            width: 15px
+            height: 2px
+
+            content: ''
+
+            background-color: $black
+        &::after
+            transform: rotate(45deg)
+        &::before
+            transform: rotate(-45deg)
+    &:hover
+        color: $hover
+
+    input:disabled ~ span
+        opacity: 0.5
+
+.round-radio
+    input
+        display: none
+    input[type='radio'] + .check-indicator
+        position: relative
+
+        display: inline-block
+
+        width: 18px
+        height: 18px
+        margin-right: 10px
+
+        vertical-align: top
+
+        border: 2px solid $black
+        border-radius: 50%
+
+    input[type='radio']:checked + .check-indicator
+        &::after
+            position: absolute
+            top: 4px
+            left: 4px
+
+            width: 10px
+            height: 10px
+
+            content: ''
+
+            background-color: $black
+            border-radius: 50%
+    &:hover
+        color: $hover
+    input:disabled ~ span
+        opacity: 0.5
+
+
+.show
+    display: block
+    animation: bounce 0.6s
+
+.hide
+    display: none
+
+
+@keyframes bounce
+    0%
+        transform: translateY(-2000px)
+    70%
+        transform: translateY(30px)
+    90%
+        transform: translateY(-10px)
+    100%
+        transform: translateY(0)
+
+
+.modal-error
+    animation: shake 0.6s
+
+@keyframes shake
+    0%, 100%
+        transform: translateX(0)
+    10%, 30%, 50%, 70%, 90%
+        transform: translateX(-10px)
+    20%, 40%, 60%, 80%
+        transform: translateX(10px)

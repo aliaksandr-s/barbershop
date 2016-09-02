@@ -94,7 +94,7 @@
                         <br>
                         сб — вс: с 10:00 до 19:00
                     </p>
-                    <a href="#" class="btn">Как проехать</a>
+                    <a href="#" class="btn open-my-map">Как проехать</a>
                     <a href="#" class="btn">Обратная связь</a>
                 </div>
                 <div class="info-block_right">
@@ -140,10 +140,10 @@
             <form class='modal-form' action="#" method="post">
                 <input type="text" name="login" placeholder="Логин" class="input-user">
                 <input type="password" name="password" placeholder="Пароль" class="input-password">
-                <label class="login-checkbox">
+                <label class="cross-checkbox">
                     <input type="checkbox" name="remember">
                     <span class="checkbox-indicator"></span>
-                    Запомнить меня
+                    <span>Запомнить меня</span>
                 </label>
                 <a href="#" class="reset-password">Я забыл пароль!</a>
                 <button type="submit" class="btn">Войти</button>
@@ -151,7 +151,7 @@
         </div>
         <div class="modal-map">
             <button class="close-modal" type="button" name="button" id="close-modal-map">Закрыть</button>
-            <div class="yandex-map"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412367!2d30.32089461566159!3d59.93879686904843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sby!4v1472658246888" width="780" height="574" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <div class="modal-overlay"></div>
         <script src="./js/main.js" charset="utf-8"></script>
